@@ -1,8 +1,11 @@
+import ExtentionHeader from "./components/extention-header";
 
 function App() {
   return (
-    <div className="App container">
-<h1>Hello</h1>
+    <div className="App">
+      <div className="container py-5">
+        <ExtentionHeader />
+      </div>
     </div>
   );
 }

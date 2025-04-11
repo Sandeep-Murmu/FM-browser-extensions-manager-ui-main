@@ -53,3 +53,26 @@ body {
   font-size: 1.6rem;
   font-family: "NatoSanse";
 }
+
+.App {
+  background: var(--Dark-Gradient);
+  min-height: 100vh;
+}
+
+.extention-header {
+  background-color: var(--neutral-800);
+  min-height: 2rem;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .extention-header__btn:active, */
+.extention-header__btn {
+  background: var(--neutral-700);
+  padding: 0.6rem;
+  border: none;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 1rem;
+}
