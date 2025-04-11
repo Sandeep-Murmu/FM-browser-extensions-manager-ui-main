@@ -76,3 +76,8 @@ body {
   height: 4.6rem;
   border-radius: 1rem;
 }
+
+.extention-tab {
+  display: flex;
+  justify-content: space-between;
+}
