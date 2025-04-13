@@ -77,11 +77,6 @@ body {
   border-radius: 1rem;
 }
 
-.extention-tab {
-  display: flex;
-  justify-content: space-between;
-}
-
 .button--text {
   border: none;
   background: var(--neutral-700);
@@ -95,4 +90,9 @@ body {
 .button--text:active {
   outline: 2px solid var(--Red-500) !important;
   outline-offset: 1px;
+}
+
+.extention-tab {
+  display: flex;
+  justify-content: space-between;
 }
