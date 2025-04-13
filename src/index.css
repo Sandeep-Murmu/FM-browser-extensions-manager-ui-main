@@ -95,4 +95,15 @@ body {
 .extention-tab {
   display: flex;
   justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.extention-tab__heading {
+  color: var(--neutral-100);
+  font-family: "NatoSanse-bd";
+}
+
+.extention-tab__tabs {
+  display: flex;
+  gap: 1rem;
 }
