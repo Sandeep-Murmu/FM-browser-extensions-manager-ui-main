@@ -1,17 +1,19 @@
 import ExtentionHeader from "./components/extention-header";
+import ExtentionList from "./components/extention-list";
 import ExtententionTab from "./components/extention-tab";
 import extentionsData from "./data.json";
 
 function App() {
-  extentionsData.forEach((extention) => {
-    console.log(extention.name);
-  });
+  // extentionsData.forEach((extention) => {
+  //   console.log(extention.name);
+  // });
 
   return (
     <div className="App">
       <div className="container py-5">
         <ExtentionHeader />
         <ExtententionTab />
+        <ExtentionList extentions={extentionsData} />
       </div>
     </div>
   );
