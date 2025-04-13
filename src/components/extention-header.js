@@ -1,7 +1,6 @@
 import logo from "../assets/images/logo.svg";
 import logoTheme from "../assets/images/icon-sun.svg";
 import ButtonIcon from "./icon-Button";
-import ButtonText from "./text-button";
 export default function ExtentionHeader() {
   return (
     <>
@@ -13,7 +12,6 @@ export default function ExtentionHeader() {
           alt="logo"
         />
 
-        <ButtonText btnContent="Active" btnClass="button--text" />
       </div>
     </>
   );
