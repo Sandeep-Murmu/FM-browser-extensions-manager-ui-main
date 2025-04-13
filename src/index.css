@@ -68,7 +68,7 @@ body {
 }
 
 /* .extention-header__btn:active, */
-.extention-header__btn {
+.button--icon {
   background: var(--neutral-700);
   padding: 0.6rem;
   border: none;
@@ -80,4 +80,19 @@ body {
 .extention-tab {
   display: flex;
   justify-content: space-between;
+}
+
+.button--text {
+  border: none;
+  background: var(--neutral-700);
+
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  color: #fff;
+}
+
+.button--icon:active,
+.button--text:active {
+  outline: 2px solid var(--Red-500) !important;
+  outline-offset: 1px;
 }
