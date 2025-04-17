@@ -80,7 +80,6 @@ body {
 .button--text {
   border: none;
   background: var(--neutral-700);
-
   padding: 1rem 2rem;
   border-radius: 100px;
   color: #fff;
@@ -109,5 +108,47 @@ body {
 }
 
 .extention-list {
-  margin-top: 3 rem;
+  margin-top: 3rem;
+}
+
+.extention-box {
+  border: 1px solid var(--neutral-200);
+  border-radius: 1.6rem;
+  background-color: var(--neutral-800);
+  min-height: 18.5rem;
+}
+
+.button--remove {
+  border: 1px solid var(--neutral-200);
+  background: var(--neutral-800);
+  padding: 0.6rem 2rem;
+  border-radius: 100px;
+  color: #fff;
+}
+
+h2.extention-box--name {
+  font-family: "NatoSanse-bd";
+}
+
+h2.extention-box--name,
+p.extention-box--para {
+  color: var(--neutral-100);
+}
+
+.button--remove:active {
+  outline: 2px solid var(--Red-500) !important;
+  outline-offset: 1px;
+}
+
+.form-check-input {
+  background-color: var(--neutral-600);
+}
+.form-check-input:checked {
+  background-color: var(--Red-500);
+  border-color: var(--Red-500);
+}
+
+.form-check-input:focus {
+  background-color: var(--Red-400);
+  box-shadow: 0 0 0 0.2rem hsla(3, 86%, 64%, 0.721);
 }
