@@ -65,6 +65,7 @@ body {
   border-radius: 1.6rem;
   display: flex;
   justify-content: space-between;
+  padding: 1.4rem;
 }
 
 /* .extention-header__btn:active, */
@@ -94,6 +95,7 @@ body {
 .extention-tab {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 6rem;
 }
 
@@ -109,6 +111,10 @@ body {
 
 .extention-list {
   margin-top: 3rem;
+}
+
+.extention-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .extention-box {
@@ -151,4 +157,34 @@ p.extention-box--para {
 .form-check-input:focus {
   background-color: var(--Red-400);
   box-shadow: 0 0 0 0.2rem hsla(3, 86%, 64%, 0.721);
+}
+
+@media only screen and (max-width: 992px) {
+  .extention-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .extention-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+
+  .extention-header {
+    padding: 1rem;
+  }
+
+  .extention-tab {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .extention-tab__heading {
+    font-size: 2.4rem;
+  }
 }

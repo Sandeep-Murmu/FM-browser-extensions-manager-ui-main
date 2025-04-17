@@ -4,9 +4,6 @@ import ExtententionTab from "./components/extention-tab";
 import extentionsData from "./data.json";
 
 function App() {
-  // extentionsData.forEach((extention) => {
-  //   console.log(extention.name);
-  // });
 
   return (
     <div className="App">

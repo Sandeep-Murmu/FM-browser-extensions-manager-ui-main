@@ -4,7 +4,7 @@ import ButtonIcon from "./icon-Button";
 export default function ExtentionHeader() {
   return (
     <>
-      <div className="extention-header p-4">
+      <div className="extention-header">
         <img src="./assets/images/logo.svg" alt="logo" />
         <ButtonIcon
           btnClass="button--icon"

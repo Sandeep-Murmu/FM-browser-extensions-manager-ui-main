@@ -5,10 +5,7 @@ export default function ExtentionList({ extentions }) {
     <>
       {/* <div className="extention-list container text-left"> */}
       <div className="extention-list container text-left  ">
-        <div
-          style={{ gridTemplateColumns: "1fr 1fr 1fr" }}
-          className="d-grid gap-3"
-        >
+        <div className="extention-grid d-grid gap-3">
           {extentions.map((ext, i) => (
             <Extention key={i} extention={ext} />
           ))}
