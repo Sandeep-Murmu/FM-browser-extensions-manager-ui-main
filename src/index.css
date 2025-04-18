@@ -92,6 +92,11 @@ body {
   outline-offset: 1px;
 }
 
+.button--text.active {
+  background-color: var(--Red-700);
+  color: var(--neutral-800);
+}
+
 .extention-tab {
   display: flex;
   justify-content: space-between;
@@ -172,7 +177,6 @@ p.extention-box--para {
 }
 
 @media only screen and (max-width: 576px) {
-
   .extention-header {
     padding: 1rem;
   }
