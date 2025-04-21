@@ -12,21 +12,21 @@ function App() {
     setActiveTab(e.target.dataset.active);
   };
 
-  useEffect(
-    function () {
-      if (activeTab === "all") {
-        setExtentions(extentionsData);
-      }
-      if (activeTab === "active") {
-        setExtentions(extentionsData.filter((e) => e.isActive));
-      }
+  // useEffect(
+  //   function () {
+  //     if (activeTab === "all") {
+  //       setExtentions(extentionsData);
+  //     }
+  //     if (activeTab === "active") {
+  //       setExtentions(extentionsData.filter((e) => e.isActive));
+  //     }
 
-      if (activeTab === "inactive") {
-        setExtentions(extentionsData.filter((e) => !e.isActive));
-      }
-    },
-    [activeTab]
-  );
+  //     if (activeTab === "inactive") {
+  //       setExtentions(extentionsData.filter((e) => !e.isActive));
+  //     }
+  //   },
+  //   [activeTab]
+  // );
 
   return (
     <div className="App">
