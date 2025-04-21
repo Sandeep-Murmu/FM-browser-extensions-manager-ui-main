@@ -8,13 +8,10 @@ export default function ExtentionList({ extentions, currentActive }) {
   }
   if (currentActive === "active") {
     renderExtentions = extentions.filter((e) => e.isActive);
-    console.log("activeExtentionList: ", renderExtentions);
   }
 
   if (currentActive === "inactive") {
     renderExtentions = extentions.filter((e) => !e.isActive);
-
-    console.log("activeExtentionList: ", renderExtentions);
   }
 
   // console.log("extentionList: ", extentions);

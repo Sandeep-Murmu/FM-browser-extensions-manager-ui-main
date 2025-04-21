@@ -2,8 +2,7 @@ import { useState } from "react";
 import ButtonText from "./text-button";
 
 export default function Extention({ extention }) {
-  const [isActive, setIsActive] = useState(extention.isActive);
-  
+  // const [isActive, setIsActive] = useState(extention.isActive);
 
   // console.log(extention.name, ": ", extention.isActive);
   return (
@@ -28,9 +27,9 @@ export default function Extention({ extention }) {
               type="checkbox"
               role="switch"
               id="extentionToggleActive"
-              checked={isActive}
+              checked={extention.isActive}
               onChange={(e) => {
-                setIsActive((active) => !active);
+                e.target.value = !e.target.value;
               }}
             />
             {/* <label className="form-check-label" htmlFor="extentionToggleActive">
