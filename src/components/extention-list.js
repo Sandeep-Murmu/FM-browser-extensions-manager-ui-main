@@ -6,6 +6,7 @@ export default function ExtentionList({
   currentActive,
   updateExtention,
   removeExtention,
+  theme,
 }) {
   const [renderExtentions, setRenderExtention] = useState([]);
   const [extentionUpdate, setExtentionUpdate] = useState(false);
@@ -46,6 +47,7 @@ export default function ExtentionList({
               updateExtention={updateExtention}
               updateExtentionList={updateExtentionList}
               removeExtention={removeExtention}
+              theme={theme}
             />
           ))}
         </div>

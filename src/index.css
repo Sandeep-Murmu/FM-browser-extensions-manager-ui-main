@@ -59,6 +59,10 @@ body {
   min-height: 100vh;
 }
 
+.App.light {
+  background: var(--Light-Gradient);
+}
+
 .extention-header {
   background-color: var(--neutral-800);
   min-height: 2rem;
@@ -66,6 +70,11 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1.4rem;
+}
+
+.extention-header.light {
+  background-color: var(--neutral-0);
+  box-shadow: 0 0 1rem var(--neutral-300);
 }
 
 /* .extention-header__btn:active, */
@@ -78,6 +87,10 @@ body {
   border-radius: 1rem;
 }
 
+.button--icon.light {
+  background-color: var(--neutral-200);
+}
+
 .button--text {
   border: none;
   background: var(--neutral-700);
@@ -86,10 +99,20 @@ body {
   color: #fff;
 }
 
+.button--text.light {
+  background: var(--neutral-0);
+  color: var(--neutral-800);
+  box-shadow: 0 0 0.6rem var(--neutral-300);
+}
+
 .button--icon:active,
 .button--text:active {
   outline: 2px solid var(--Red-500) !important;
   outline-offset: 1px;
+}
+
+.button--text.active.light {
+  color: var(--neutral-100);
 }
 
 .button--text.active {
@@ -107,6 +130,10 @@ body {
 .extention-tab__heading {
   color: var(--neutral-100);
   font-family: "NatoSanse-bd";
+}
+
+.extention-tab__heading.light {
+  color: var(--neutral-800);
 }
 
 .extention-tab__tabs {
@@ -129,12 +156,30 @@ body {
   min-height: 18.5rem;
 }
 
+.extention-box.light {
+  background-color: var(--neutral-0);
+}
+
+.extention-box.light input.form-check-input {
+  background-color: var(--neutral-200);
+}
+
+.extention-box.light input.form-check-input:checked {
+  background-color: var(--Red-500);
+}
+
 .button--remove {
   border: 1px solid var(--neutral-200);
   background: var(--neutral-800);
   padding: 0.6rem 2rem;
   border-radius: 100px;
   color: #fff;
+}
+
+.button--remove.light {
+  background: var(--neutral-0);
+  box-shadow: 0 0 1rem var(--neutral-300);
+  color: var(--neutral-700);
 }
 
 h2.extention-box--name {
@@ -144,6 +189,14 @@ h2.extention-box--name {
 h2.extention-box--name,
 p.extention-box--para {
   color: var(--neutral-100);
+}
+
+h2.extention-box--name.light {
+  color: var(--neutral-800);
+}
+
+p.extention-box--para.light {
+  color: var(--neutral-700);
 }
 
 .button--remove:active {

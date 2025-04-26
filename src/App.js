@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import ExtentionHeader from "./components/extention-header";
 import ExtentionList from "./components/extention-list";
 import ExtententionTab from "./components/extention-tab";
@@ -7,6 +7,12 @@ import extentionsData from "./data.json";
 function App() {
   const [activeTab, setActiveTab] = useState("all");
   const [extentions, setExtentions] = useState(extentionsData);
+  const [theme, setTheme] = useState("dark");
+
+  const handleTheme = function () {
+    setTheme((theme) => (theme === "light" ? "dark" : "light"));
+    console.log("theme: ", theme);
+  };
 
   const handleSetActive = function (e) {
     setActiveTab(e.target.dataset.active);
@@ -33,19 +39,23 @@ function App() {
     setExtentions((ext) => {
       return extentionsData;
     });
-
   };
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <div className="container py-5">
-        <ExtentionHeader />
-        <ExtententionTab currentActive={activeTab} onActive={handleSetActive} />
+        <ExtentionHeader theme={theme} switchTheme={handleTheme} />
+        <ExtententionTab
+          currentActive={activeTab}
+          onActive={handleSetActive}
+          theme={theme}
+        />
         <ExtentionList
           extentions={extentions}
           currentActive={activeTab}
           updateExtention={updateExtention}
           removeExtention={handleExtentionRemove}
+          theme={theme}
         />
       </div>
     </div>

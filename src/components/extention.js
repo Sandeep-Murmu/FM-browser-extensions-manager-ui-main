@@ -6,6 +6,7 @@ export default function Extention({
   updateExtention,
   updateExtentionList,
   removeExtention,
+  theme,
 }) {
   const [isActive, setIsActive] = useState(extention.isActive);
 
@@ -25,7 +26,9 @@ export default function Extention({
   // console.log(extention.name, ": ", extention.isActive);
   return (
     <>
-      <div className="extention-box d-flex flex-column justify-content-between p-4">
+      <div
+        className={`extention-box d-flex flex-column justify-content-between p-4 ${theme}`}
+      >
         <div className="extention-box--top d-flex align-items-start gap-4">
           <img
             className="extention-box--image"
@@ -33,13 +36,15 @@ export default function Extention({
             alt={extention.name}
           />
           <div className="extention-box--text">
-            <h2 className="extention-box--name">{extention.name}</h2>
-            <p className="extention-box--para">{extention.description}</p>
+            <h2 className={`extention-box--name ${theme}`}>{extention.name}</h2>
+            <p className={`extention-box--para ${theme}`}>
+              {extention.description}
+            </p>
           </div>
         </div>
         <div className="extention-bot--bottom d-flex justify-content-between align-items-center">
           <ButtonText
-            btnClass="button--remove"
+            btnClass={`button--remove ${theme}`}
             btnContent="Remove"
             onClick={() => {
               removeExtention(extention);
