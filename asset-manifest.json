@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FM-browser-extensions-manager-ui-main/static/css/main.8860c0c6.css",
+    "main.js": "/FM-browser-extensions-manager-ui-main/static/js/main.6b707e94.js",
+    "static/media/NotoSans-Medium.ttf": "/FM-browser-extensions-manager-ui-main/static/media/NotoSans-Medium.4ea329101279b68d9f28.ttf",
+    "static/media/NotoSans-Bold.ttf": "/FM-browser-extensions-manager-ui-main/static/media/NotoSans-Bold.27d083f7f844fb896ae7.ttf",
+    "static/media/NotoSans-Regular.ttf": "/FM-browser-extensions-manager-ui-main/static/media/NotoSans-Regular.9ab05beb031b68562995.ttf",
+    "index.html": "/FM-browser-extensions-manager-ui-main/index.html",
+    "main.8860c0c6.css.map": "/FM-browser-extensions-manager-ui-main/static/css/main.8860c0c6.css.map",
+    "main.6b707e94.js.map": "/FM-browser-extensions-manager-ui-main/static/js/main.6b707e94.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8860c0c6.css",
+    "static/js/main.6b707e94.js"
+  ]
+}
