@@ -5,6 +5,7 @@ export default function Extention({
   extention,
   updateExtention,
   updateExtentionList,
+  removeExtention,
 }) {
   const [isActive, setIsActive] = useState(extention.isActive);
 
@@ -37,7 +38,14 @@ export default function Extention({
           </div>
         </div>
         <div className="extention-bot--bottom d-flex justify-content-between align-items-center">
-          <ButtonText btnClass="button--remove" btnContent="Remove" />
+          <ButtonText
+            btnClass="button--remove"
+            btnContent="Remove"
+            onClick={() => {
+              removeExtention(extention);
+              updateExtentionList();
+            }}
+          />
           <div className="form-check form-switch">
             <input
               className="form-check-input"

@@ -24,6 +24,18 @@ function App() {
     });
   };
 
+  const handleExtentionRemove = function (extention) {
+    const removeIndex = extentionsData.findIndex(
+      (el) => el.name === extention.name
+    );
+
+    extentionsData.splice(removeIndex, 1);
+    setExtentions((ext) => {
+      return extentionsData;
+    });
+
+  };
+
   return (
     <div className="App">
       <div className="container py-5">
@@ -33,6 +45,7 @@ function App() {
           extentions={extentions}
           currentActive={activeTab}
           updateExtention={updateExtention}
+          removeExtention={handleExtentionRemove}
         />
       </div>
     </div>

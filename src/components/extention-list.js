@@ -5,14 +5,15 @@ export default function ExtentionList({
   extentions,
   currentActive,
   updateExtention,
+  removeExtention,
 }) {
   const [renderExtentions, setRenderExtention] = useState([]);
-  const [extentionStatusChanged, setExtentionStatusChanged] = useState(false);
+  const [extentionUpdate, setExtentionUpdate] = useState(false);
 
   // let renderExtentions;
 
   function updateExtentionList() {
-    setExtentionStatusChanged((e) => !e);
+    setExtentionUpdate((e) => !e);
   }
 
   useEffect(
@@ -28,7 +29,7 @@ export default function ExtentionList({
         setRenderExtention(extentions.filter((e) => !e.isActive));
       }
     },
-    [currentActive, extentionStatusChanged]
+    [currentActive, extentionUpdate]
   );
 
   // console.log("extentionList: ", extentions);
@@ -44,6 +45,7 @@ export default function ExtentionList({
               extention={ext}
               updateExtention={updateExtention}
               updateExtentionList={updateExtentionList}
+              removeExtention={removeExtention}
             />
           ))}
         </div>
