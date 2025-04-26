@@ -1,18 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Extention from "./extention";
 
-export default function ExtentionList({ extentions, currentActive }) {
-  let renderExtentions;
-  if (currentActive === "all") {
-    renderExtentions = extentions;
-  }
-  if (currentActive === "active") {
-    renderExtentions = extentions.filter((e) => e.isActive);
+export default function ExtentionList({
+  extentions,
+  currentActive,
+  updateExtention,
+}) {
+  const [renderExtentions, setRenderExtention] = useState([]);
+  const [extentionStatusChanged, setExtentionStatusChanged] = useState(false);
+
+  // let renderExtentions;
+
+  function updateExtentionList() {
+    setExtentionStatusChanged((e) => !e);
   }
 
-  if (currentActive === "inactive") {
-    renderExtentions = extentions.filter((e) => !e.isActive);
-  }
+  useEffect(
+    function () {
+      if (currentActive === "all") {
+        setRenderExtention(extentions);
+      }
+      if (currentActive === "active") {
+        setRenderExtention(extentions.filter((e) => e.isActive));
+      }
+
+      if (currentActive === "inactive") {
+        setRenderExtention(extentions.filter((e) => !e.isActive));
+      }
+    },
+    [currentActive, extentionStatusChanged]
+  );
 
   // console.log("extentionList: ", extentions);
   // console.log(currentActive);
@@ -22,7 +39,12 @@ export default function ExtentionList({ extentions, currentActive }) {
       <div className="extention-list container text-left  ">
         <div className="extention-grid d-grid gap-3">
           {renderExtentions.map((ext, i) => (
-            <Extention key={i} extention={ext} />
+            <Extention
+              key={i}
+              extention={ext}
+              updateExtention={updateExtention}
+              updateExtentionList={updateExtentionList}
+            />
           ))}
         </div>
       </div>

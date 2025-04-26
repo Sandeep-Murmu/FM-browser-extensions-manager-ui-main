@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ExtentionHeader from "./components/extention-header";
 import ExtentionList from "./components/extention-list";
 import ExtententionTab from "./components/extention-tab";
@@ -12,28 +12,28 @@ function App() {
     setActiveTab(e.target.dataset.active);
   };
 
-  // useEffect(
-  //   function () {
-  //     if (activeTab === "all") {
-  //       setExtentions(extentionsData);
-  //     }
-  //     if (activeTab === "active") {
-  //       setExtentions(extentionsData.filter((e) => e.isActive));
-  //     }
+  const updateExtention = function (extention, value) {
+    const index = extentionsData.findIndex((el) => el.name === extention.name);
+    // console.log("extention : ", extentionsData[index]);
+    // console.log("extention index: ", index);
+    // console.log(!value);
 
-  //     if (activeTab === "inactive") {
-  //       setExtentions(extentionsData.filter((e) => !e.isActive));
-  //     }
-  //   },
-  //   [activeTab]
-  // );
+    extentionsData[index].isActive = !value;
+    setExtentions((ext) => {
+      return extentionsData;
+    });
+  };
 
   return (
     <div className="App">
       <div className="container py-5">
         <ExtentionHeader />
         <ExtententionTab currentActive={activeTab} onActive={handleSetActive} />
-        <ExtentionList extentions={extentions} currentActive={activeTab} />
+        <ExtentionList
+          extentions={extentions}
+          currentActive={activeTab}
+          updateExtention={updateExtention}
+        />
       </div>
     </div>
   );

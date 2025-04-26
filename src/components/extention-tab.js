@@ -1,7 +1,6 @@
 import ButtonText from "./text-button";
 
 export default function ExtentionTab({ currentActive, onActive }) {
-  console.log(currentActive);
 
   return (
     <>

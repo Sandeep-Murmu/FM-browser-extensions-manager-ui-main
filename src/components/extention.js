@@ -1,8 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonText from "./text-button";
 
-export default function Extention({ extention }) {
-  // const [isActive, setIsActive] = useState(extention.isActive);
+export default function Extention({
+  extention,
+  updateExtention,
+  updateExtentionList,
+}) {
+  const [isActive, setIsActive] = useState(extention.isActive);
+
+  function handleActive() {
+    setIsActive((a) => !a);
+    updateExtention(extention, isActive);
+    updateExtentionList();
+  }
+
+  // useEffect(
+  //   function () {
+  //     updateExtention(extention, isActive);
+  //   },
+  //   [isActive]
+  // );
 
   // console.log(extention.name, ": ", extention.isActive);
   return (
@@ -28,8 +45,9 @@ export default function Extention({ extention }) {
               role="switch"
               id="extentionToggleActive"
               checked={extention.isActive}
+              value={isActive}
               onChange={(e) => {
-                e.target.value = !e.target.value;
+                handleActive();
               }}
             />
             {/* <label className="form-check-label" htmlFor="extentionToggleActive">
