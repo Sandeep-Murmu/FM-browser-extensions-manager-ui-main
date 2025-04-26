@@ -1,6 +1,5 @@
-// import logo from "../assets/images/logo.svg";
-// import logoTheme from "../assets/images/icon-sun.svg";
 import ButtonIcon from "./icon-Button";
+
 export default function ExtentionHeader({ theme, switchTheme }) {
   return (
     <>

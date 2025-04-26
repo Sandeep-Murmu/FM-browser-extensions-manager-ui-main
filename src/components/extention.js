@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import ButtonText from "./text-button";
 
 export default function Extention({
@@ -16,14 +16,6 @@ export default function Extention({
     updateExtentionList();
   }
 
-  // useEffect(
-  //   function () {
-  //     updateExtention(extention, isActive);
-  //   },
-  //   [isActive]
-  // );
-
-  // console.log(extention.name, ": ", extention.isActive);
   return (
     <>
       <div
